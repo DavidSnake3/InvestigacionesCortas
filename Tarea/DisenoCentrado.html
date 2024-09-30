@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación 3: Diseño Centrado en el Usuario (DCU)</title>
+    <link rel="icon" href="icon.ico" type="x-icon">
+    <link rel="stylesheet" href="PaginaCSS/DisenoCentrado.css">
+</head>
+
+<body>
+    <header>
+        <h1>Diseño Centrado en el Usuario (DCU)</h1>
+        <p class="subtitle">Creando experiencias digitales que satisfacen las necesidades reales de los usuarios</p>
+    </header>
+
+    <main class="container">
+        <article class="card">
+            <h2>¿Qué es el Diseño Centrado en el Usuario?</h2>
+            <p>El Diseño Centrado en el Usuario (DCU) es un enfoque de diseño que pone a los usuarios y sus necesidades en el centro del proceso de desarrollo de un sitio web o aplicación. Este método implica involucrar a los usuarios en cada etapa del proceso de diseño, desde la investigación inicial hasta la implementación y evaluación final.</p>
+        </article>
+
+        <section class="card">
+            <h2>Etapas del Diseño Centrado en el Usuario</h2>
+            <div class="steps">
+                <article class="step">
+                    <div class="step-icon">🔍</div>
+                    <h3>Investigación</h3>
+                    <p>Comprender a los usuarios y sus necesidades</p>
+                </article>
+                <article class="step">
+                    <div class="step-icon">✏️</div>
+                    <h3>Diseño</h3>
+                    <p>Crear soluciones basadas en la investigación</p>
+                </article>
+                <article class="step">
+                    <div class="step-icon">🧪</div>
+                    <h3>Evaluación</h3>
+                    <p>Probar las soluciones con usuarios reales</p>
+                </article>
+                <article class="step">
+                    <div class="step-icon">🚀</div>
+                    <h3>Implementación</h3>
+                    <p>Lanzar el producto o servicio</p>
+                </article>
+                <article class="step">
+                    <div class="step-icon">📊</div>
+                    <h3>Monitoreo</h3>
+                    <p>Seguimiento y mejora continua</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Beneficios del DCU</h2>
+            <div class="benefits">
+                <article class="benefit">
+                    <h3>Mayor satisfacción del usuario</h3>
+                    <p>Al diseñar basándose en las necesidades reales de los usuarios, se logra una mayor satisfacción y lealtad.</p>
+                </article>
+                <article class="benefit">
+                    <h3>Aumento en la eficiencia</h3>
+                    <p>Los usuarios pueden completar tareas más rápidamente y con menos errores.</p>
+                </article>
+                <article class="benefit">
+                    <h3>Reducción de costos</h3>
+                    <p>Menos necesidad de rediseños y menor costo de soporte al usuario.</p>
+                </article>
+                <article class="benefit">
+                    <h3>Mejora en la retención</h3>
+                    <p>Los usuarios son más propensos a volver a un producto que satisface sus necesidades.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Ejemplos de DCU en Redes Sociales</h2>
+            <div class="examples">
+                <article class="example">
+                    <h3>Instagram Stories</h3>
+                    <p>Instagram utilizó el DCU para mejorar la función de Stories, realizando extensas investigaciones de usuarios y pruebas de usabilidad.</p>
+                    <div class="example-content">
+                        <p>El resultado fue una interfaz más intuitiva con nuevas características como encuestas y preguntas interactivas, que aumentaron significativamente el engagement de los usuarios.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>Algoritmo de TikTok</h3>
+                    <p>TikTok aplicó principios de DCU en el desarrollo de su algoritmo de recomendación, centrándose en la personalización y la experiencia del usuario.</p>
+                    <div class="example-content">
+                        <p>Esto resultó en un feed "Para ti" altamente personalizado que aprende rápidamente de las preferencias del usuario, aumentando el tiempo de permanencia en la app y la satisfacción del usuario.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>LinkedIn Skill Assessments</h3>
+                    <p>LinkedIn desarrolló sus evaluaciones de habilidades basándose en la retroalimentación de los usuarios.</p>
+                    <div class="example-content">
+                        <p>Esto permitió a los profesionales validar sus competencias y destacar en las búsquedas de empleo, mejorando tanto la experiencia del usuario como la efectividad de la plataforma para conectar talento con oportunidades laborales.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <a href="Principal.html" class="back-link">Volver al índice</a>
+        </footer>
+    </main>
+
+    <script>
+        function animateCards() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, 200 * index);
+            });
+        }
+
+        function toggleExample() {
+            this.classList.toggle('active');
+        }
+
+        function parallaxHeader() {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.pageYOffset;
+                header.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCards();
+            parallaxHeader();
+            const examples = document.querySelectorAll('.example');
+            examples.forEach(example => {
+                example.addEventListener('click', toggleExample);
+            });
+        });
+    </script>
+</body>
+
+</html>
