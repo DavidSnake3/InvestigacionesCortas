@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación 2: Accesibilidad web</title>
+    <link rel="icon" href="icon.ico" type="x-icon">
+    <link rel="stylesheet" href="PaginaCSS/Accesibilidad.css">
+</head>
+
+<body>
+    <header>
+        <h1>Accesibilidad Web</h1>
+        <p class="subtitle">Creando un internet inclusivo para todos los usuarios</p>
+    </header>
+
+    <main class="container">
+        <article class="card">
+            <h2>¿Qué es la Accesibilidad Web?</h2>
+            <p>La accesibilidad web se refiere al diseño y desarrollo de sitios web que pueden ser utilizados por todas las personas, incluyendo aquellas con discapacidades o limitaciones tecnológicas. El objetivo es garantizar que todos los usuarios puedan percibir, entender, navegar e interactuar con la web de manera efectiva.</p>
+        </article>
+
+        <section class="card">
+            <h2>Importancia de la Accesibilidad</h2>
+            <p>La accesibilidad web es crucial porque:</p>
+            <ul>
+                <li>Garantiza la igualdad de acceso a la información y funcionalidades en línea</li>
+                <li>Mejora la experiencia del usuario para todos, no solo para personas con discapacidades</li>
+                <li>Aumenta la audiencia potencial y el alcance del sitio web</li>
+                <li>Cumple con requisitos legales en muchos países</li>
+                <li>Mejora el SEO y la visibilidad en los motores de búsqueda</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Principios de Accesibilidad (WCAG)</h2>
+            <div class="principles">
+                <article class="principle">
+                    <div class="principle-icon">👁️</div>
+                    <h3>Perceptible</h3>
+                    <p>La información y los componentes de la interfaz deben ser presentables a los usuarios de manera que puedan percibirlos</p>
+                </article>
+                <article class="principle">
+                    <div class="principle-icon">🖱️</div>
+                    <h3>Operable</h3>
+                    <p>Los componentes de la interfaz y la navegación deben ser operables</p>
+                </article>
+                <article class="principle">
+                    <div class="principle-icon">🧠</div>
+                    <h3>Comprensible</h3>
+                    <p>La información y el manejo de la interfaz de usuario deben ser comprensibles</p>
+                </article>
+                <article class="principle">
+                    <div class="principle-icon">💪</div>
+                    <h3>Robusto</h3>
+                    <p>El contenido debe ser suficientemente robusto como para ser interpretado de forma fiable por una amplia variedad de aplicaciones de usuario, incluyendo las ayudas técnicas</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Ejemplos de Accesibilidad en Redes Sociales</h2>
+            <div class="examples">
+                <article class="example">
+                    <h3>Facebook: Texto alternativo</h3>
+                    <p>Proporciona descripciones de texto alternativo para imágenes.</p>
+                    <div class="example-content">
+                        <p>Esto permite que los lectores de pantalla describan el contenido visual a usuarios con discapacidad visual, mejorando significativamente su experiencia en la plataforma.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>Twitter: Navegación por teclado</h3>
+                    <p>Permite a los usuarios navegar por su timeline y realizar acciones utilizando solo el teclado.</p>
+                    <div class="example-content">
+                        <p>Esta característica beneficia a usuarios que no pueden utilizar un ratón, permitiéndoles interactuar plenamente con la plataforma mediante atajos de teclado.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>LinkedIn: Lenguaje claro</h3>
+                    <p>Utiliza un lenguaje claro y sencillo en sus formularios de registro y perfil.</p>
+                    <div class="example-content">
+                        <p>Proporciona instrucciones explícitas para completar cada sección, lo que ayuda a usuarios con dificultades cognitivas o de aprendizaje a navegar y utilizar la plataforma de manera efectiva.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>YouTube: Subtítulos y transcripciones</h3>
+                    <p>Ofrece subtítulos automáticos y la opción de agregar transcripciones manuales.</p>
+                    <div class="example-content">
+                        <p>Esta característica hace que el contenido de video sea accesible a personas con discapacidad auditiva, permitiéndoles disfrutar y comprender plenamente los videos en la plataforma.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <a href="index.html" class="back-link">Volver al índice</a>
+        </footer>
+    </main>
+
+    <script>
+        function animateCards() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, 200 * index);
+            });
+        }
+
+        function toggleExample() {
+            this.classList.toggle('active');
+        }
+
+        function parallaxHeader() {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.pageYOffset;
+                header.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCards();
+            parallaxHeader();
+            const examples = document.querySelectorAll('.example');
+            examples.forEach(example => {
+                example.addEventListener('click', toggleExample);
+            });
+        });
+    </script>
+</body>
+
+</html>

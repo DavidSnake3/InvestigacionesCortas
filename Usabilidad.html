@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación 1: Usabilidad web</title>
+    <link rel="icon" href="icon.ico" type="x-icon">
+    <link rel="stylesheet" href="PaginaCSS/Usabilidad.css">
+</head>
+
+<body>
+    <header>
+        <h1>Usabilidad Web</h1>
+        <p class="subtitle">Diseñando experiencias web eficientes y satisfactorias para los usuarios</p>
+    </header>
+
+    <main class="container">
+        <article class="card">
+            <h2>¿Qué es la Usabilidad Web?</h2>
+            <p>La usabilidad web se refiere a la facilidad con la que los usuarios pueden interactuar con un sitio web y lograr sus objetivos de manera eficiente y satisfactoria. Es un aspecto crucial del diseño web que se centra en crear experiencias intuitivas y agradables para los usuarios.</p>
+        </article>
+
+        <section class="card">
+            <h2>Importancia de la Usabilidad</h2>
+            <p>La usabilidad es fundamental porque:</p>
+            <ul>
+                <li>Mejora la experiencia del usuario</li>
+                <li>Aumenta la retención de visitantes</li>
+                <li>Reduce los costos de soporte y mantenimiento</li>
+                <li>Incrementa las conversiones y ventas en sitios de comercio electrónico</li>
+                <li>Mejora la accesibilidad para todos los usuarios</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Principios de Usabilidad</h2>
+            <div class="principles">
+                <div class="principle">
+                    <div class="principle-icon">🔍</div>
+                    <h3>Claridad</h3>
+                    <p>Información y diseño claros y concisos</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🔄</div>
+                    <h3>Consistencia</h3>
+                    <p>Diseño y funcionalidad coherentes en todo el sitio</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">⚡</div>
+                    <h3>Eficiencia</h3>
+                    <p>Tareas completadas con mínimo esfuerzo</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">💬</div>
+                    <h3>Retroalimentación</h3>
+                    <p>Respuestas claras a las acciones del usuario</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-icon">🛡️</div>
+                    <h3>Prevención de errores</h3>
+                    <p>Diseño que minimiza errores del usuario</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Ejemplos de Usabilidad en Redes Sociales</h2>
+            <div class="examples">
+                <article class="example">
+                    <h3>Instagram: Claridad</h3>
+                    <p>Utiliza iconos claros y reconocibles para sus principales funciones.</p>
+                    <div class="example-content">
+                        <p>Por ejemplo, la cámara para publicar, el corazón para "me gusta" y el avión de papel para mensajes directos. Esto permite a los usuarios identificar rápidamente las acciones que desean realizar, mejorando la usabilidad de la aplicación.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>Facebook: Consistencia</h3>
+                    <p>Mantiene un diseño coherente en todas sus páginas.</p>
+                    <div class="example-content">
+                        <p>La barra de navegación superior y la columna de noticias central se mantienen en la mayoría de las vistas. Esta consistencia ayuda a los usuarios a orientarse fácilmente y encontrar las funciones que buscan, independientemente de la sección en la que se encuentren.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>Twitter: Eficiencia</h3>
+                    <p>Implementa el desplazamiento infinito en su feed de noticias.</p>
+                    <div class="example-content">
+                        <p>Esto permite a los usuarios cargar más tweets simplemente deslizando hacia abajo. Esta característica aumenta la eficiencia al eliminar la necesidad de hacer clic en botones de "cargar más" o navegar entre páginas.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>LinkedIn: Retroalimentación</h3>
+                    <p>Proporciona notificaciones inmediatas para interacciones clave.</p>
+                    <div class="example-content">
+                        <p>Por ejemplo, cuando alguien ve tu perfil, te envía un mensaje o te conecta con otro usuario. Esta retroalimentación mantiene a los usuarios informados sobre las interacciones en la plataforma, mejorando su experiencia y fomentando el engagement.</p>
+                    </div>
+                </article>
+                <article class="example">
+                    <h3>YouTube: Prevención de errores</h3>
+                    <p>Solicita confirmación antes de realizar acciones irreversibles.</p>
+                    <div class="example-content">
+                        <p>Por ejemplo, antes de eliminar un video o cancelar una carga en progreso. Esta medida previene errores accidentales que podrían resultar en la pérdida de contenido o trabajo del usuario.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <a href="index.html" class="back-link">Volver al índice</a>
+        </footer>
+    </main>
+
+    <script>
+        // Animación de aparición de las tarjetas
+        function animateCards() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, 200 * index);
+            });
+        }
+
+        // Expandir/contraer ejemplos al hacer clic
+        function toggleExample() {
+            this.classList.toggle('active');
+        }
+
+        // Efecto de parallax en el encabezado
+        function parallaxHeader() {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.pageYOffset;
+                header.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            });
+        }
+
+        // Inicializar interacciones
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCards();
+            parallaxHeader();
+            const examples = document.querySelectorAll('.example');
+            examples.forEach(example => {
+                example.addEventListener('click', toggleExample);
+            });
+        });
+    </script>
+</body>
+
+</html>
